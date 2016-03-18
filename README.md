@@ -1,5 +1,4 @@
 ﻿# Flone frame
-
 This is the official repository of the airframe of [flone](http://flone.cc) quadcopter. 
 
 Flone is an Free Libre Open Source drone ecosystem composed by physical hardware and software.
@@ -31,22 +30,4 @@ Recommended thickness: 2mm.
 
 * **Download the right file**  - select the file more close to the thickness of the material or create one if you want the exact size.  
 
-```python
-    from pyechonest import config
-    config.ECHO_NEST_API_KEY="YOUR API KEY"
-```
-
-* Check out the [docs](http://echonest.github.com/pyechonest/) and examples below.
-
-
-## Hack the frame
-*We encourage to hack the structure to fit your needs and share with others!*
-Download the file and edit with Inkscape:
-
-```python
-from pyechonest import artist
-bk = artist.Artist('bikini kill')
-print "Artists similar to: %s:" % (bk.name,)
-for similar_artist in bk.similar: print "\t%s" % (similar_artist.name,)
-```
-
+* Check out the [documentation](http://wiki.flone.cc) and [forums](http://forum.flone.cc).
