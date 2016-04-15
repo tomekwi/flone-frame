@@ -11,7 +11,7 @@ getSvg.onload = function onload() {
   function updateFunction(range, display, parameter) {
     return function update() {
       const value = range.value;
-      display.textContent = Number(value).toPrecision(2);
+      display.textContent = Number(value).toPrecision(3);
       parametricSvg.setAttribute(parameter, value);
     };
   }
