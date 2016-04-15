@@ -1,0 +1,49 @@
+<!doctype html>
+<head>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+  <style>
+    html {
+      font-family: 'open sans', sans-serif;;
+    }
+
+    body {
+      margin: 0 auto;
+      padding: 2rem 3rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      max-width: 60ch;
+    }
+
+    label {
+      padding-right: 1rem;
+      display: block;
+    }
+
+    input {
+      display: block;
+      flex-grow: 1;
+    }
+
+    p {
+      display: flex;
+      width: 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <p>
+    <label>size = <span id="size-display"></span></label>
+    <input id="size" type="range"
+      value="4"
+      min="1"
+      max="6"
+      step="0.1"
+    />
+  </p>
+
+  <script src="script.js"></script>
+  <script src="parametric-svg-element.js"></script>
+</body>
