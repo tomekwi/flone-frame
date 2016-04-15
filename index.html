@@ -16,26 +16,33 @@
       max-width: 60ch;
     }
 
-    label {
-      padding-right: 1rem;
-      display: block;
-    }
-
     input {
       display: block;
       flex-grow: 1;
     }
 
-    p {
+    .form {
       display: flex;
       width: 100%;
+      margin: 0 0 3em;
+    }
+
+    .form > * {
+      display: block;
+      margin: 0 2ch;
+    }
+
+    button {
+      line-height: 1.5;
+      padding: 0 2ch;
+      flex-grow: 1;
     }
   </style>
 </head>
 
 <body>
-  <p>
-    <label>size = <span id="size-display"></span></label>
+  <p class="form">
+    <label>size = <span id="size-display">4.00</span> mm</label>
     <input id="size" type="range"
       value="4"
       min="1"
@@ -44,6 +51,11 @@
     />
   </p>
 
+  <p class="form">
+    <button id="save-as">⬇ Render and download</button>
+  </p>
+
+  <script src="FileSaver.min.js"></script>
   <script src="script.js"></script>
   <script src="parametric-svg-element.js"></script>
 </body>

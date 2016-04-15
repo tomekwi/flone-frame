@@ -6,7 +6,7 @@ getSvg.onload = function onload() {
 
   parametricSvg.innerHTML = this.responseText;
   const body = document.body;
-  body.insertBefore(parametricSvg, body.firstChild);
+  body.appendChild(parametricSvg);
 
   function updateFunction(range, display, parameter) {
     return function update() {
@@ -27,6 +27,15 @@ getSvg.onload = function onload() {
 
     setTimeout(update);
     range.addEventListener('input', update);
+  });
+
+  // “Save as”
+  const saveAsButton = document.getElementById('save-as');
+  saveAsButton.addEventListener('click', function() {
+    const blob = new Blob([
+      parametricSvg.innerHTML,
+    ], {type: "image/svg+xml;charset=utf-8"});
+    saveAs(blob, "flone3.svg");
   });
 };
 
